@@ -1,0 +1,12 @@
+spring:
+ rabbitmq:
+    host: 192.168.31.128
+    port: 5672
+    username: root
+    password: root
+    listener:
+      simple:
+        retry:
+          max-attempts: 30 # 接收或者发布消息失败时，最大尝试次数
+server:
+  port: 8079
